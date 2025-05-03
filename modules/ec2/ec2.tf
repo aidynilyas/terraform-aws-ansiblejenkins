@@ -26,7 +26,3 @@ resource "aws_instance" "web" {
   subnet_id = aws_subnet.main.id
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 }
-
-output ec2 {
-    value = aws_instance.web.public_ip
-}
